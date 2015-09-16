@@ -1,12 +1,3 @@
-minetest.register_on_joinplayer(function(player)
-	player:set_physics_override({
-		gravity = 1.0, -- 0.5 = 4 blocks - IDK why..
-	})
-
-	local pos = player:getpos()
-end)
-
-
 minetest.register_item(":", {
 	type = "none",
 	wield_image = "wieldhand.png",
