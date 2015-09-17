@@ -10,6 +10,8 @@ uforun.register_node("red")
 uforun.register_node("green")
 uforun.register_node("yellow")
 uforun.register_node("brown")
+uforun.register_node("white")
+uforun.register_node("black")
 
 minetest.register_node(
    "uforun:finishline",
