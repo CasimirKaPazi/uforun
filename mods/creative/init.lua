@@ -1,4 +1,4 @@
-if minetest.setting_getbool("creative_mode") then
+if minetest.setting_getbool("creative_mode") and minetest.setting_getbool("place_at_location") then
    -- Don't do anything with on_place(Should fix this so you don't
    -- have to point at something to place a block)
    function minetest.nodedef_default.on_place(itemstack, user, pointed)
