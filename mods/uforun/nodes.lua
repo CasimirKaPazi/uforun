@@ -1,3 +1,4 @@
+--basic nodes (colored)
 uforun.register_node = function(color)
 	minetest.register_node("uforun:"..color, {
 		description = color.." Block",
@@ -13,6 +14,7 @@ uforun.register_node("brown")
 uforun.register_node("white")
 uforun.register_node("black")
 
+-- special nodes (with extra textures/functions...)
 minetest.register_node(
    "uforun:finishline",
    {
