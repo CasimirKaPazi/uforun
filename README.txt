@@ -14,6 +14,7 @@ At the moment unusable. Just trow in the code we need.
 			Show it in creative
 		1 block high player model and properties
 		Mod to handle level start, end and teleportation to new levels
+			Respawn at start when falling of level
 		Creative mode to build the levels
 			Fly by default
 
@@ -61,8 +62,6 @@ creative
 
 License of source code:
 -----------------------
-Copyright (C) 2011-2012 celeron55, Perttu Ahola <celeron55@gmail.com>
-
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 2.0 of the License, or
