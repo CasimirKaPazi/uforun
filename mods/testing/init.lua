@@ -1,4 +1,4 @@
-if minetest.setting_get("testing_mod") then
+if minetest.setting_get("testing_mod") and false then -- I disabled this - because we have an mapgen now :D - you can enable it if you really need it (cd)
 
 minetest.register_on_mapgen_init(function(mgparams)
 	minetest.set_mapgen_params({mgname="v7"})
