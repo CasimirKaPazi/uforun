@@ -21,15 +21,35 @@ minetest.register_node(
       description = "(Uforun) Finishline",
       tiles = {"uforun_finishline.png"},
       groups = {crumbly=3},
+	on_punch = function(pos, node, puncher, pointed_thing)
+		if puncher:is_player() then
+			pos.y = pos.y +1
+			puncher:setpos(pos)
+			local playername = puncher:get_player_name() 
+			local privs = minetest.get_player_privs(playername)
+			privs.fly = true
+			minetest.set_player_privs(playername, privs)
+		end
+	end
    })
 
-minetest.register_node(
-   "uforun:startline",
-   {
-      description = "(Uforun) Startline",
-      tiles = {"uforun_startline.png"},
-      groups = {crumbly=3},
-   })
+minetest.register_node("uforun:startline",
+{
+	description = "(Uforun) Startline",
+	tiles = {"uforun_startline.png"},
+	groups = {crumbly=3},
+	on_punch = function(pos, node, puncher, pointed_thing)
+		if puncher:is_player() then
+			pos.y = pos.y +1
+			puncher:setpos(pos)
+
+			local playername = puncher:get_player_name() 
+			local privs = minetest.get_player_privs(playername)
+			privs.fly = false
+			minetest.set_player_privs(playername, privs)
+		end
+	end
+})
 
 minetest.register_node(
    "uforun:dirt",
