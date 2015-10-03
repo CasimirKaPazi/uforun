@@ -5,7 +5,7 @@ minetest.register_on_mapgen_init(function(mgparams)
 end)
 
 minetest.register_node("testing:node", {
-	description = "Testing",
+	description = "testing node",
 	tiles = {"testing_node.png"},
 	groups = {oddly_breakable_by_hand=3},
 })
