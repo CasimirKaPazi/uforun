@@ -90,3 +90,33 @@ minetest.register_node(
       tiles = {"uforun_ice.png", "uforun_dirt.png", "uforun_ice_side"},
       groups = {crumbly=3},
    })
+
+minetest.register_node(
+   "uforun:spikes",
+   {
+      description = "spikes",
+      drawtype = "plantlike",
+      tiles = {"uforun_spikes.png"},
+      inventory_image = "uforun_spikes.png",
+      sunlight_propagates = true,
+      walkable = false,
+      paramtype = "light",
+      damage_per_second = 2,
+      groups = {crumbly=3},
+   })
+
+minetest.register_node(
+   "uforun:cushion",
+   {
+      description = "cushion",
+      tiles = {"uforun_cushion_top.png", "uforun_cushion_bottom.png", "uforun_cushion_side.png"},
+      groups = {crumbly=3, fall_damage_add_percent=-100},
+   })
+
+minetest.register_node(
+   "uforun:bouncer",
+   {
+      description = "bouncer",
+      tiles = {"uforun_bouncer.png"},
+      groups = {crumbly=3, bouncy=75, fall_damage_add_percent=-50},
+   })
