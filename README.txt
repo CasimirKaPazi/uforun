@@ -19,7 +19,7 @@ At the moment unusable. Just trow in the code we need.
 			Fly by default
 
 	Additional features (nice to have - later):
-		Special blocks: spices, jump pads, cushions
+		Special blocks: jump pads
 		Background music and sound effects
 		Creative mode:
 			Ingame switching

@@ -34,3 +34,9 @@ kaadmy (CC0):
   uforun_spikes.png
   uforun_startline.png
   uforun_ufo.png
+
+Wuzzy (WTFPL):
+  uforun_bouncer.png
+  uforun_cushion_top.png
+  uforun_cushion_side.png
+  uforun_cushion_bottom.png
