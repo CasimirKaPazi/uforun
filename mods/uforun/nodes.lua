@@ -18,7 +18,7 @@ uforun.register_node("black")
 minetest.register_node(
    "uforun:finishline",
    {
-      description = "(Uforun) Finishline",
+      description = "finish line",
       tiles = {"uforun_finishline.png"},
       groups = {crumbly=3},
 	on_punch = function(pos, node, puncher, pointed_thing)
@@ -35,7 +35,7 @@ minetest.register_node(
 
 minetest.register_node("uforun:startline",
 {
-	description = "(Uforun) Startline",
+	description = "start line",
 	tiles = {"uforun_startline.png"},
 	groups = {crumbly=3},
 	on_punch = function(pos, node, puncher, pointed_thing)
@@ -54,7 +54,7 @@ minetest.register_node("uforun:startline",
 minetest.register_node(
    "uforun:dirt",
    {
-      description = "(Uforun) Dirt",
+      description = "dirt",
       tiles = {"uforun_dirt.png"},
       groups = {crumbly=3},
    })
@@ -62,7 +62,7 @@ minetest.register_node(
 minetest.register_node(
    "uforun:grass",
    {
-      description = "(Uforun) Grass",
+      description = "grass",
       tiles = {"uforun_grass.png"},
       groups = {crumbly=3},
    })
@@ -70,7 +70,7 @@ minetest.register_node(
 minetest.register_node(
    "uforun:ice",
    {
-      description = "(Uforun) Ice",
+      description = "ice",
       tiles = {"uforun_ice.png"},
       groups = {crumbly=3},
    })
@@ -78,7 +78,7 @@ minetest.register_node(
 minetest.register_node(
    "uforun:dirt_with_grass",
    {
-      description = "(Uforun) Dirt with Grass",
+      description = "dirt with grass",
       tiles = {"uforun_grass.png", "uforun_dirt.png", "uforun_grass_side.png"},
       groups = {crumbly=3},
    })
@@ -86,7 +86,7 @@ minetest.register_node(
 minetest.register_node(
    "uforun:dirt_with_ice",
    {
-      description = "(Uforun) Dirt with Ice",
+      description = "dirt with ice",
       tiles = {"uforun_ice.png", "uforun_dirt.png", "uforun_ice_side"},
       groups = {crumbly=3},
    })
