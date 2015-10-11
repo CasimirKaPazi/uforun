@@ -1,4 +1,8 @@
 uforun = {}
-dofile(minetest.get_modpath("uforun").."/player.lua")
-dofile(minetest.get_modpath("uforun").."/nodes.lua")
-dofile(minetest.get_modpath("uforun").."/mapgen.lua")
+
+local modpath = minetest.get_modpath("uforun")
+
+dofile(modpath.."/player.lua")
+dofile(modpath.."/nodes.lua")
+dofile(modpath.."/mapgen.lua")
+dofile(modpath.."/ufo.lua")

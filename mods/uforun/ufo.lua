@@ -10,9 +10,9 @@ local function get_v(v)
 	return math.sqrt(v.x^2+v.z^2)
 end
 
-minetest.register_entity("ufo:ufo", {
+minetest.register_entity("uforun:ufo", {
 	visual = "wielditem",
-	textures = {"ufo:ufo"},
+	textures = {"uforun:ufo"},
 	visual_size = {x=0.667, y=0.667},
 	collisionbox = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
 	physical = true,
@@ -39,7 +39,7 @@ minetest.register_entity("ufo:ufo", {
 			self.removed = true
 			self.object:remove()
 			if not minetest.setting_getbool("creative_mode") then
-				puncher:get_inventory():add_item("main", "ufo:ufo")
+				puncher:get_inventory():add_item("main", "uforun:ufo")
 			end
 		end
 	end,
@@ -131,11 +131,11 @@ minetest.register_entity("ufo:ufo", {
 	end
 })
 
-minetest.register_node("ufo:ufo", {
+minetest.register_node("uforun:ufo", {
 	description = "UFO",
 	drawtype = "nodebox",
 	paramtype = "light",
-	tiles = {"ufo_top.png", "ufo_bottom.png", "ufo_side.png"},
+	tiles = {"uforun_ufo_top.png", "uforun_ufo_bottom.png", "uforun_ufo_side.png"},
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -147,7 +147,7 @@ minetest.register_node("ufo:ufo", {
 		if pointed_thing.type ~= "node" then
 			return
 		end
-		minetest.add_entity(pointed_thing.above, "ufo:ufo")
+		minetest.add_entity(pointed_thing.above, "uforun:ufo")
 		if not minetest.setting_getbool("creative_mode") then
 			itemstack:take_item()
 		end
