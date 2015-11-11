@@ -2,7 +2,7 @@ Subgame for the Minetest engine.
 Community approach on trying to recreate the unreleased UFOrace by Kenny.
 See https://forum.minetest.net/viewtopic.php?f=50&t=12391
 
-At the moment unusable. Just trow in the code we need.
+At the moment unusable. Just throw in the code we need.
 
 
 #
@@ -25,7 +25,7 @@ At the moment unusable. Just trow in the code we need.
 			Ingame switching
 
 
-The hard part is not to add to much.
+The hard part is not to add too much.
 
 #
 # In progress
