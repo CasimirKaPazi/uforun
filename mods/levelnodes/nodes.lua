@@ -1,25 +1,25 @@
 --basic nodes (colored)
-uforun.register_node = function(color)
-	minetest.register_node("uforun:"..color, {
+levelnodes.register_node = function(color)
+	minetest.register_node("levelnodes:"..color, {
 		description = color.." Block",
-		tiles = {"uforun_basic_node.png^[colorize:"..color..":100"},
+		tiles = {"levelnodes_basic_node.png^[colorize:"..color..":100"},
 		groups = {crumbly=3},
 	})
 end
 
-uforun.register_node("red")
-uforun.register_node("green")
-uforun.register_node("yellow")
-uforun.register_node("brown")
-uforun.register_node("white")
-uforun.register_node("black")
+levelnodes.register_node("red")
+levelnodes.register_node("green")
+levelnodes.register_node("yellow")
+levelnodes.register_node("brown")
+levelnodes.register_node("white")
+levelnodes.register_node("black")
 
 -- special nodes (with extra textures/functions...)
 minetest.register_node(
-   "uforun:finishline",
+   "levelnodes:finishline",
    {
       description = "finish line",
-      tiles = {"uforun_finishline.png"},
+      tiles = {"levelnodes_finishline.png"},
       groups = {crumbly=3},
 	on_punch = function(pos, node, puncher, pointed_thing)
 		if puncher:is_player() then
@@ -33,10 +33,10 @@ minetest.register_node(
 	end
    })
 
-minetest.register_node("uforun:startline",
+minetest.register_node("levelnodes:startline",
 {
 	description = "start line",
-	tiles = {"uforun_startline.png"},
+	tiles = {"levelnodes_startline.png"},
 	groups = {crumbly=3},
 	on_punch = function(pos, node, puncher, pointed_thing)
 		if puncher:is_player() then
@@ -52,52 +52,52 @@ minetest.register_node("uforun:startline",
 })
 
 minetest.register_node(
-   "uforun:dirt",
+   "levelnodes:dirt",
    {
       description = "dirt",
-      tiles = {"uforun_dirt.png"},
+      tiles = {"levelnodes_dirt.png"},
       groups = {crumbly=3},
    })
 
 minetest.register_node(
-   "uforun:grass",
+   "levelnodes:grass",
    {
       description = "grass",
-      tiles = {"uforun_grass.png"},
+      tiles = {"levelnodes_grass.png"},
       groups = {crumbly=3},
    })
 
 minetest.register_node(
-   "uforun:ice",
+   "levelnodes:ice",
    {
       description = "ice",
-      tiles = {"uforun_ice.png"},
+      tiles = {"levelnodes_ice.png"},
       groups = {crumbly=3},
    })
 
 minetest.register_node(
-   "uforun:dirt_with_grass",
+   "levelnodes:dirt_with_grass",
    {
       description = "dirt with grass",
-      tiles = {"uforun_grass.png", "uforun_dirt.png", "uforun_grass_side.png"},
+      tiles = {"levelnodes_grass.png", "levelnodes_dirt.png", "levelnodes_grass_side.png"},
       groups = {crumbly=3},
    })
 
 minetest.register_node(
-   "uforun:dirt_with_ice",
+   "levelnodes:dirt_with_ice",
    {
       description = "dirt with ice",
-      tiles = {"uforun_ice.png", "uforun_dirt.png", "uforun_ice_side"},
+      tiles = {"levelnodes_ice.png", "levelnodes_dirt.png", "levelnodes_ice_side"},
       groups = {crumbly=3},
    })
 
 minetest.register_node(
-   "uforun:spikes",
+   "levelnodes:spikes",
    {
       description = "spikes",
       drawtype = "plantlike",
-      tiles = {"uforun_spikes.png"},
-      inventory_image = "uforun_spikes.png",
+      tiles = {"levelnodes_spikes.png"},
+      inventory_image = "levelnodes_spikes.png",
       sunlight_propagates = true,
       walkable = false,
       paramtype = "light",
@@ -106,17 +106,17 @@ minetest.register_node(
    })
 
 minetest.register_node(
-   "uforun:cushion",
+   "levelnodes:cushion",
    {
       description = "cushion",
-      tiles = {"uforun_cushion_top.png", "uforun_cushion_bottom.png", "uforun_cushion_side.png"},
+      tiles = {"levelnodes_cushion_top.png", "levelnodes_cushion_bottom.png", "levelnodes_cushion_side.png"},
       groups = {crumbly=3, fall_damage_add_percent=-100},
    })
 
 minetest.register_node(
-   "uforun:bouncer",
+   "levelnodes:bouncer",
    {
       description = "bouncer",
-      tiles = {"uforun_bouncer.png"},
+      tiles = {"levelnodes_bouncer.png"},
       groups = {crumbly=3, bouncy=75, fall_damage_add_percent=-50},
    })
