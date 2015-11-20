@@ -8,7 +8,7 @@ minetest.register_on_generated(function(minp, maxp, seed)
 	local data = vm:get_data()
 
 	local c_air = minetest.get_content_id("air")
-	local c_startline = minetest.get_content_id("uforun:startline")
+	local c_startline = minetest.get_content_id("levelnodes:startline")
 
 	for z = minp.z, maxp.z do
 		for y = minp.y, maxp.y do
