@@ -87,7 +87,7 @@ minetest.register_node(
    "levelnodes:dirt_with_ice",
    {
       description = "dirt with ice",
-      tiles = {"levelnodes_ice.png", "levelnodes_dirt.png", "levelnodes_ice_side"},
+      tiles = {"levelnodes_ice.png", "levelnodes_dirt.png", "levelnodes_ice_side.png"},
       groups = {crumbly=3},
    })
 
