@@ -5,7 +5,7 @@ local modpath = minetest.get_modpath("uforun")
 dofile(modpath.."/player.lua")
 dofile(modpath.."/ufo.lua")
 
-# Proberties
+-- Proberties
 
 minetest.register_on_joinplayer(function(player)
 	local player = minetest.get_player_by_name(name)
