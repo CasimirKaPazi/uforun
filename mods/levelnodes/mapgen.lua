@@ -11,14 +11,14 @@ minetest.register_on_generated(function(minp, maxp, seed)
 	local c_startline = minetest.get_content_id("levelnodes:startline")
 
 	for z = minp.z, maxp.z do
-		for y = minp.y, maxp.y do
-			for x = minp.x, maxp.x do
-				local pos = area:index(x, y, z)
-				if y % 50 == 0 and x < 3 and x > 0 and z < 3 and z > 0 then
-					data[pos] = c_startline
-				end
-			end
+	for y = minp.y, maxp.y do
+	for x = minp.x, maxp.x do
+		local pos = area:index(x, y, z)
+		if (y+1) % 50 == 0 and x < 2 and x > -2 and z < 2 and z > -2 then
+			data[pos] = c_startline
 		end
+	end
+	end
 	end
 
 	vm:set_data(data)
