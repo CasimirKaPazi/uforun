@@ -14,7 +14,7 @@ minetest.register_on_generated(function(minp, maxp, seed)
 	for y = minp.y, maxp.y do
 	for x = minp.x, maxp.x do
 		local pos = area:index(x, y, z)
-		if (y+1) % 50 == 0 and x < 2 and x > -2 and z < 2 and z > -2 then
+		if (((x) % 50 == 0 and (z) % 50 == 0) or ((x+1) % 50 == 0 and (z+1) % 50 == 0) or ((x) % 50 == 0 and (z+1) % 50 == 0) or ((x+1) % 50 == 0 and (z) % 50 == 0)) and y == -2 then
 			data[pos] = c_startline
 		end
 	end

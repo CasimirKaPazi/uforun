@@ -21,8 +21,9 @@ Everything not listed in here: CC-BY-SA
 
 cd2 (CC-BY-SA):
   uforun_basic_node.png
-	heart.png
+  heart.png
   wieldhand.png
+  crack_anylength.png
 
 kaadmy (CC0):
   player*
