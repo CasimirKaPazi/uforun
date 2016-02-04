@@ -24,6 +24,8 @@ cd2 (CC-BY-SA):
   heart.png
   wieldhand.png
   crack_anylength.png
+  sun.png
+  moon.png
 
 kaadmy (CC0):
   player*
