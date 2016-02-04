@@ -47,6 +47,7 @@ minetest.register_node("levelnodes:startline",
 			local privs = minetest.get_player_privs(playername)
 			privs.fly = false
 			minetest.set_player_privs(playername, privs)
+			minetest.add_entity(pos, "uforun:ufo")
 		end
 	end
 })
