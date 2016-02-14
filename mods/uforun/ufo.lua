@@ -103,7 +103,15 @@ minetest.register_entity("uforun:ufo", {
 			local nodedef = node and minetest.registered_nodes[node.name]
 			if control.jump and velocity.y == 0
 			and nodedef and nodedef.walkable then
-				self.object:setvelocity(vector.new(velocity.x, 13, velocity.z))
+				self.object:setvelocity(vector.new(velocity.x, 10, velocity.z))
+			end
+			if node and node.name == "levelnodes:finishline" then
+				self.removed = true
+				if self.driver and self.driver:is_player() then
+					self.driver:set_detach()
+					self.driver = nil
+				end
+				self.object:remove()
 			end
 		end
 
