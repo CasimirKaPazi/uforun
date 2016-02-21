@@ -24,11 +24,6 @@ minetest.register_node(
 	on_punch = function(pos, node, puncher, pointed_thing)
 		if puncher:is_player() then
 			pos.y = pos.y +1
-			puncher:setpos(pos)
-			local playername = puncher:get_player_name() 
-			local privs = minetest.get_player_privs(playername)
-			privs.fly = true
-			minetest.set_player_privs(playername, privs)
 		end
 	end
    })
@@ -41,12 +36,6 @@ minetest.register_node("levelnodes:startline",
 	on_punch = function(pos, node, puncher, pointed_thing)
 		if puncher:is_player() then
 			pos.y = pos.y +1
-			puncher:setpos(pos)
-
-			local playername = puncher:get_player_name() 
-			local privs = minetest.get_player_privs(playername)
-			privs.fly = false
-			minetest.set_player_privs(playername, privs)
 			minetest.add_entity(pos, "uforun:ufo")
 		end
 	end

@@ -125,6 +125,17 @@ minetest.register_entity("uforun:ufo", {
 				end
 				self.object:remove()
 			end
+			if self.object:getpos().y < -50 then
+				self.removed = true
+				if self.driver and self.driver:is_player() then
+					self.driver:set_detach()
+					local driver_pos = self.driver:getpos()
+					driver_pos.y = driver_pos.y + 70
+					self.driver:setpos(driver_pos)
+					self.driver = nil
+				end
+				self.object:remove()
+			end
 		end
 
 		velocity = self.object:getvelocity()
