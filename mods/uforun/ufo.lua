@@ -1,3 +1,5 @@
+sliding = false
+
 local function get_sign(i)
 	return i == 0 and 0 or i/math.abs(i)
 end
@@ -78,11 +80,21 @@ minetest.register_entity("uforun:ufo", {
 		if self.driver then
 			local control = self.driver:get_player_control()
 			local yaw = self.object:getyaw()
-
-			if control.up then
-				self.speed = self.speed+0.2
-			elseif control.down then
-				self.speed = self.speed-0.2
+			
+			if sliding then
+				if control.up then
+					self.speed = self.speed+0.2
+				elseif control.down then
+					self.speed = self.speed-0.2
+				end
+			else
+				if control.up then
+					self.speed = self.speed+0.3
+				elseif control.down then
+					self.speed = self.speed-0.3
+				else
+					self.speed = 0
+				end
 			end
 
 			if control.left then
