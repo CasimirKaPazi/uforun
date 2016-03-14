@@ -15,6 +15,16 @@ function creative.play(player)
 	-- TODO: clear inventory
 end
 
+creative.register_building_node("levelnodes:finishline 4")
+creative.register_building_node("levelnodes:dirt 99")
+creative.register_building_node("levelnodes:grass 99")
+creative.register_building_node("levelnodes:ice 99")
+creative.register_building_node("levelnodes:dirt_with_grass 99")
+creative.register_building_node("levelnodes:spikes 99")
+creative.register_building_node("levelnodes:dirt_with_ice 99")
+creative.register_building_node("levelnodes:cushion 99")
+creative.register_building_node("levelnodes:bouncer 99")
+
 if minetest.setting_getbool("creative_mode") then
 
 -- Place node at player pos
