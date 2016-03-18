@@ -3,7 +3,7 @@ levelnodes.register_node = function(color)
 	minetest.register_node("levelnodes:"..color, {
 		description = color.." Block",
 		tiles = {"levelnodes_basic_node.png^[colorize:"..color..":100"},
-		groups = {crumbly=3},
+		groups = {levelnode=3},
 	})
 end
 
@@ -18,7 +18,7 @@ levelnodes.register_node("black")
 minetest.register_node("levelnodes:finishline", {
       description = "finish line",
       tiles = {"levelnodes_finishline.png"},
-      groups = {crumbly=3},
+      groups = {levelnode=3},
 	on_punch = function(pos, node, puncher, pointed_thing)
 		if puncher:is_player() then
 			pos.y = pos.y +1
@@ -29,7 +29,7 @@ minetest.register_node("levelnodes:finishline", {
 minetest.register_node("levelnodes:startline", {
 	description = "start line",
 	tiles = {"levelnodes_startline.png"},
-	groups = {crumbly=3},
+	groups = {hard=3},
 	on_punch = function(pos, node, puncher, pointed_thing)
 		if puncher:is_player() then
 			pos.y = pos.y +1
@@ -41,31 +41,31 @@ minetest.register_node("levelnodes:startline", {
 minetest.register_node("levelnodes:dirt", {
       description = "dirt",
       tiles = {"levelnodes_dirt.png"},
-      groups = {crumbly=3},
+      groups = {levelnode=3},
 })
 
 minetest.register_node("levelnodes:grass", {
       description = "grass",
       tiles = {"levelnodes_grass.png"},
-      groups = {crumbly=3},
+      groups = {levelnode=3},
 })
 
 minetest.register_node("levelnodes:ice", {
       description = "ice",
       tiles = {"levelnodes_ice.png"},
-      groups = {crumbly=3},
+      groups = {levelnode=3},
 })
 
 minetest.register_node("levelnodes:dirt_with_grass", {
       description = "dirt with grass",
       tiles = {"levelnodes_grass.png", "levelnodes_dirt.png", "levelnodes_grass_side.png"},
-      groups = {crumbly=3},
+      groups = {levelnode=3},
 })
 
 minetest.register_node("levelnodes:dirt_with_ice", {
       description = "dirt with ice",
       tiles = {"levelnodes_ice.png", "levelnodes_dirt.png", "levelnodes_ice_side.png"},
-      groups = {crumbly=3},
+      groups = {levelnode=3},
 })
 
 minetest.register_node("levelnodes:spikes", {
@@ -77,19 +77,19 @@ minetest.register_node("levelnodes:spikes", {
       walkable = false,
       paramtype = "light",
       damage_per_second = 2,
-      groups = {crumbly=3},
+      groups = {levelnode=3},
 })
 
 minetest.register_node("levelnodes:cushion", {
       description = "cushion",
       tiles = {"levelnodes_cushion_top.png", "levelnodes_cushion_bottom.png", "levelnodes_cushion_side.png"},
-      groups = {crumbly=3, fall_damage_add_percent=-100},
+      groups = {levelnode=3, fall_damage_add_percent=-100},
 })
 
 minetest.register_node("levelnodes:bouncer", {
       description = "bouncer",
       tiles = {"levelnodes_bouncer.png"},
-      groups = {crumbly=3, bouncy=75, fall_damage_add_percent=-50},
+      groups = {levelnode=3, bouncy=75, fall_damage_add_percent=-50},
 })
 
 minetest.register_node("levelnodes:coin", {
@@ -100,7 +100,7 @@ minetest.register_node("levelnodes:coin", {
 		type = "fixed",
 		fixed = {-0.2, -0.2, -0.2, 0.2, 0.2, 0.2},
 	},
-	groups = {crumbly=3},
+	groups = {levelnode=3},
 	walkable     = false,
 	paramtype = "light",
 })
@@ -114,7 +114,7 @@ minetest.register_node("levelnodes:coin_removed", {
 	pointable    = false,
 	diggable     = false, 
 	buildable_to = true, 
-	groups = {crumbly=3},
+	groups = {levelnode=3},
 })
 
 
