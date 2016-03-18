@@ -15,9 +15,7 @@ levelnodes.register_node("white")
 levelnodes.register_node("black")
 
 -- special nodes (with extra textures/functions...)
-minetest.register_node(
-   "levelnodes:finishline",
-   {
+minetest.register_node("levelnodes:finishline", {
       description = "finish line",
       tiles = {"levelnodes_finishline.png"},
       groups = {crumbly=3},
@@ -26,10 +24,9 @@ minetest.register_node(
 			pos.y = pos.y +1
 		end
 	end
-   })
+})
 
-minetest.register_node("levelnodes:startline",
-{
+minetest.register_node("levelnodes:startline", {
 	description = "start line",
 	tiles = {"levelnodes_startline.png"},
 	groups = {crumbly=3},
@@ -41,49 +38,37 @@ minetest.register_node("levelnodes:startline",
 	end
 })
 
-minetest.register_node(
-   "levelnodes:dirt",
-   {
+minetest.register_node("levelnodes:dirt", {
       description = "dirt",
       tiles = {"levelnodes_dirt.png"},
       groups = {crumbly=3},
-   })
+})
 
-minetest.register_node(
-   "levelnodes:grass",
-   {
+minetest.register_node("levelnodes:grass", {
       description = "grass",
       tiles = {"levelnodes_grass.png"},
       groups = {crumbly=3},
-   })
+})
 
-minetest.register_node(
-   "levelnodes:ice",
-   {
+minetest.register_node("levelnodes:ice", {
       description = "ice",
       tiles = {"levelnodes_ice.png"},
       groups = {crumbly=3},
-   })
+})
 
-minetest.register_node(
-   "levelnodes:dirt_with_grass",
-   {
+minetest.register_node("levelnodes:dirt_with_grass", {
       description = "dirt with grass",
       tiles = {"levelnodes_grass.png", "levelnodes_dirt.png", "levelnodes_grass_side.png"},
       groups = {crumbly=3},
-   })
+})
 
-minetest.register_node(
-   "levelnodes:dirt_with_ice",
-   {
+minetest.register_node("levelnodes:dirt_with_ice", {
       description = "dirt with ice",
       tiles = {"levelnodes_ice.png", "levelnodes_dirt.png", "levelnodes_ice_side.png"},
       groups = {crumbly=3},
-   })
+})
 
-minetest.register_node(
-   "levelnodes:spikes",
-   {
+minetest.register_node("levelnodes:spikes", {
       description = "spikes",
       drawtype = "plantlike",
       tiles = {"levelnodes_spikes.png"},
@@ -93,20 +78,51 @@ minetest.register_node(
       paramtype = "light",
       damage_per_second = 2,
       groups = {crumbly=3},
-   })
+})
 
-minetest.register_node(
-   "levelnodes:cushion",
-   {
+minetest.register_node("levelnodes:cushion", {
       description = "cushion",
       tiles = {"levelnodes_cushion_top.png", "levelnodes_cushion_bottom.png", "levelnodes_cushion_side.png"},
       groups = {crumbly=3, fall_damage_add_percent=-100},
-   })
+})
 
-minetest.register_node(
-   "levelnodes:bouncer",
-   {
+minetest.register_node("levelnodes:bouncer", {
       description = "bouncer",
       tiles = {"levelnodes_bouncer.png"},
       groups = {crumbly=3, bouncy=75, fall_damage_add_percent=-50},
-   })
+})
+
+minetest.register_node("levelnodes:coin", {
+	description = "coin",
+	tiles = {"levelnodes_coin.png"},
+	drawtype = "nodebox",
+	node_box = {
+		type = "fixed",
+		fixed = {-0.2, -0.2, -0.2, 0.2, 0.2, 0.2},
+	},
+	groups = {crumbly=3},
+	walkable     = false,
+	paramtype = "light",
+})
+
+minetest.register_node("levelnodes:coin_removed", {
+	description = "coin (REMOVED)",
+	drawtype = "airlike",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable     = false,
+	pointable    = false,
+	diggable     = false, 
+	buildable_to = true, 
+	groups = {crumbly=3},
+})
+
+
+minetest.register_abm({
+	nodenames = {"levelnodes:coin_removed"},
+	interval = 30.0,
+	chance = 1,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		minetest.set_node(pos, {name = "levelnodes:coin"})
+	end
+})

@@ -110,6 +110,13 @@ minetest.register_entity("uforun:ufo", {
 					self.object:setyaw(yaw-(1+dtime)*0.05)
 				end
 			end
+			
+			-- remove coins
+			local is_coin = minetest.get_node(pos).name == "levelnodes:coin"
+			if is_coin then
+				minetest.set_node(pos, {name="levelnodes:coin_removed"})
+			end
+
 
 			local node = minetest.get_node(vector.new(pos.x, pos.y-1, pos.z))
 			local nodedef = node and minetest.registered_nodes[node.name]
