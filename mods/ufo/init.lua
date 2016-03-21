@@ -12,9 +12,9 @@ local function get_v(v)
 	return math.sqrt(v.x^2+v.z^2)
 end
 
-minetest.register_entity("uforun:ufo", {
+minetest.register_entity("ufo:ufo", {
 	visual = "wielditem",
-	textures = {"uforun:ufo"},
+	textures = {"ufo:ufo"},
 	visual_size = {x=0.667, y=0.667},
 	collisionbox = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
 	physical = true,
@@ -41,7 +41,7 @@ minetest.register_entity("uforun:ufo", {
 			self.removed = true
 			self.object:remove()
 			if not minetest.setting_getbool("creative_mode") then
-				puncher:get_inventory():add_item("main", "uforun:ufo")
+				puncher:get_inventory():add_item("main", "ufo:ufo")
 			end
 		end
 	end,
@@ -169,7 +169,7 @@ minetest.register_entity("uforun:ufo", {
 	end
 })
 
-minetest.register_node("uforun:ufo", {
+minetest.register_node("ufo:ufo", {
 	description = "UFO",
 	drawtype = "nodebox",
 	paramtype = "light",
@@ -185,7 +185,7 @@ minetest.register_node("uforun:ufo", {
 		if pointed_thing.type ~= "node" then
 			return
 		end
-		minetest.add_entity(pointed_thing.above, "uforun:ufo")
+		minetest.add_entity(pointed_thing.above, "ufo:ufo")
 		if not minetest.setting_getbool("creative_mode") then
 			itemstack:take_item()
 		end
