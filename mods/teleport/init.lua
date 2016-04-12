@@ -4,7 +4,7 @@ teleport.players = {}
 
 function teleport.tp(player)
 	local name = player:get_player_name()
-	if teleport.players[name] then
+	if not teleport.players[name] then
 		teleport.players[name] = 0
 	end
 	teleport.players[name] = teleport.players[name] + 1 

@@ -25,6 +25,19 @@ creative.register_building_node("levelnodes:dirt_with_ice 99")
 creative.register_building_node("levelnodes:cushion 99")
 creative.register_building_node("levelnodes:bouncer 99")
 
+minetest.register_chatcommand("build", {
+	params = "",
+	description = "Switch to building mode",
+	func = function(name, param)
+		local player = minetest.get_player_by_name(name)
+		if not player then
+			return false, "Player not found"
+		end
+		creative.build(player)
+		return true, "Done."
+	end,
+})
+
 if minetest.setting_getbool("creative_mode") then
 
 -- Place node at player pos

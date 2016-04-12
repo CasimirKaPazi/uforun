@@ -128,6 +128,7 @@ minetest.register_entity("ufo:ufo", {
 				self.removed = true
 				if self.driver and self.driver:is_player() then
 					self.driver:set_detach()
+					teleport.tp(self.driver)
 					self.driver = nil
 				end
 				self.object:remove()
