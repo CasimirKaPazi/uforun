@@ -16,7 +16,7 @@ minetest.register_entity("ufo:ufo", {
 	visual = "wielditem",
 	textures = {"ufo:ufo"},
 	visual_size = {x=0.667, y=0.667},
-	collisionbox = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+	collisionbox = {-0.5, -0.5, -0.5, 0.5, 0.4, 0.5},
 	physical = true,
 
 	speed = 0,
