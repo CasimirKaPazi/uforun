@@ -11,6 +11,14 @@ function teleport.tp(player)
 	player:setpos({x = teleport.players[name]*50, y = 10, z = 0})
 end
 
+function teleport.back(player)
+	local name = player:get_player_name()
+	if not teleport.players[name] then
+		teleport.players[name] = 0
+	end
+	player:setpos({x = teleport.players[name]*50, y = 10, z = 0})
+end
+
 function teleport.new_player(name)
 	teleport.players[name] = 0
 end
