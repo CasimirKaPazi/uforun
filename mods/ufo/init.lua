@@ -201,7 +201,7 @@ else
 	minetest.register_on_joinplayer(function(player)
 		player:set_properties({
 			mesh = "ufo.x",
-			textures = {"ufo_skin.png",},
+			textures = {"ufo.png",},
 			visual = "mesh",
 			visual_size = {x=1, y=1},
 		})
