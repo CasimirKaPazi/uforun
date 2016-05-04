@@ -30,11 +30,6 @@ minetest.register_node("levelnodes:startline", {
 	description = "start line",
 	tiles = {"levelnodes_startline.png"},
 	groups = {hard=3},
-	on_punch = function(pos, node, puncher, pointed_thing)
-		if puncher:is_player() then
-			pos.y = pos.y +1
-			minetest.add_entity(pos, "ufo:ufo")
-		end
 	end
 })
 
