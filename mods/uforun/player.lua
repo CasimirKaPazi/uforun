@@ -6,9 +6,12 @@ uforun.gui.colors = "listcolors[#333333FF;#101010FF;#000000FF;#68B259;#FFF]"
 function uforun.player_set_model(player, model_name)
 	local name = player:get_player_name()
 	player:set_properties({
-		textures = {"player.png", "player_back.png"},
-		visual = "upright_sprite",
+		mesh = model_name,
+		textures = {"uforun_ufo.png"},
+		visual = "mesh",
+		selectionbox = {-0.5,-1,-0.5, 0.5,0.0,0.5},
 		collisionbox = {-0.5,-1,-0.5, 0.5,0.0,0.5},
+		visual_size = {x=1, y=1},
 	})
 end
 
@@ -18,7 +21,7 @@ uforun.inv_form = uforun.inv_form..uforun.gui.bg
 uforun.inv_form = uforun.inv_form.."list[current_player;main;0,3;8,4;]"
 
 minetest.register_on_joinplayer(function(player)
-	uforun.player_set_model(player)
+	uforun.player_set_model(player, "ufo.b3d")
 	player:set_eye_offset({x=0,y=-10,z=0},{x=0,y=0,z=0})
 	player:set_inventory_formspec(uforun.inv_form)
 end)
@@ -39,4 +42,3 @@ minetest.register_item(":", {
 		damage_groups = {fleshy=4},
 	}
 })
-
