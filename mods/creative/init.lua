@@ -2,6 +2,7 @@ creative = {}
 creative.building_nodes = {}
 
 function creative.build(player)
+	-- add items
 	for k,v in pairs(creative.building_nodes) do
 		player:get_inventory():add_item('main', v)
 	end
@@ -12,7 +13,13 @@ function creative.register_building_node(name)
 end
 
 function creative.play(player)
-	-- TODO: clear inventory
+	-- clear inventory
+	local inv = player:get_inventory()
+	local m = inv:get_list("main")
+	for k,v in pairs(m) do
+		v:clear()
+	end
+	inv:set_list("main", m)
 end
 
 creative.register_building_node("levelnodes:finishline 4")
