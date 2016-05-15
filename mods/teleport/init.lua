@@ -19,6 +19,11 @@ function teleport.back(player)
 	player:setpos({x = teleport.players[name]*50, y = 10, z = 0})
 end
 
+function teleport.lobby(player)
+	local name = player:get_player_name()
+	player:setpos({x = 0, y = 100, z = 0})
+end
+
 function teleport.new_player(name)
 	teleport.players[name] = 0
 end

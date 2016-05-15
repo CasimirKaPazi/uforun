@@ -38,6 +38,34 @@ minetest.register_chatcommand("build", {
 	end,
 })
 
+minetest.register_chatcommand("play", {
+	params = "",
+	description = "Switch to play mode",
+	func = function(name, param)
+		local player = minetest.get_player_by_name(name)
+		if not player then
+			return false, "Player not found"
+		end
+		creative.play(player)
+		teleport.back(player)
+		return true, "Done."
+	end,
+})
+
+minetest.register_chatcommand("lobby", {
+	params = "",
+	description = "Teleport to lobby",
+	func = function(name, param)
+		local player = minetest.get_player_by_name(name)
+		if not player then
+			return false, "Player not found"
+		end
+		creative.play(player)
+		teleport.lobby(player)
+		return true, "Done."
+	end,
+})
+
 if minetest.setting_getbool("creative_mode") then
 
 -- Place node at player pos
