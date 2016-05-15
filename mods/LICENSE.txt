@@ -27,18 +27,18 @@ cd2 (CC-BY-SA):
 
 kaadmy (CC0):
   player*
-  uforun_dirt.png
-  uforun_finishline.png
-  uforun_grass.png
-  uforun_grass_side.png
-  uforun_ice.png
-  uforun_ice_side.png
-  uforun_spikes.png
-  uforun_startline.png
-  uforun_ufo.png
+  levelnodes_dirt.png
+  levelnodes_finishline.png
+  levelnodes_grass.png
+  levelnodes_grass_side.png
+  levelnodes_ice.png
+  levelnodes_ice_side.png
+  levelnodes_spikes.png
+  levelnodes_startline.png
+  levelnodes_ufo.png
 
 Wuzzy (WTFPL):
-  uforun_bouncer.png
-  uforun_cushion_top.png
-  uforun_cushion_side.png
-  uforun_cushion_bottom.png
+  levelnodes_bouncer.png
+  levelnodes_cushion_top.png
+  levelnodes_cushion_side.png
+  levelnodes_cushion_bottom.png
