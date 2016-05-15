@@ -35,7 +35,6 @@ kaadmy (CC0):
   levelnodes_ice_side.png
   levelnodes_spikes.png
   levelnodes_startline.png
-  levelnodes_ufo.png
 
 Wuzzy (WTFPL):
   levelnodes_bouncer.png
