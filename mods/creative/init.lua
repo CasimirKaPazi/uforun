@@ -73,6 +73,21 @@ minetest.register_chatcommand("lobby", {
 	end,
 })
 
+minetest.register_chatcommand("goto", {
+	params = "",
+	description = "Goto level",
+	func = function(name, param)
+		local player = minetest.get_player_by_name(name)
+		if not player then
+			return false, "Player not found"
+		end
+		teleport.players[name] = tonumber(param)-1 or 0
+		creative.play(player)
+		teleport.back(player)
+		return true, "Done."
+	end,
+})
+
 if minetest.setting_getbool("creative_mode") then
 
 -- Place node at player pos
