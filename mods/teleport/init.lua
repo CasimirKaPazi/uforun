@@ -24,6 +24,11 @@ function teleport.lobby(player)
 	player:setpos({x = 0, y = 100, z = 0})
 end
 
+function teleport.set_level(player, p)
+	local name = player:get_player_name()
+	teleport.players[name] = math.floor(p.x/50+0.5) or teleport.players[name]
+end
+
 function teleport.new_player(name)
 	teleport.players[name] = 0
 end

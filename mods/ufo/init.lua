@@ -229,6 +229,11 @@ else
 			if node and node.name == "levelnodes:finishline" then
 				teleport.tp(player)
 			end
+
+			-- is on startline
+			if node and node.name == "levelnodes:startline" then
+				teleport.set_level(player, vector.new(pos.x, pos.y-1, pos.z))
+			end
 		end
 	end)
 end
