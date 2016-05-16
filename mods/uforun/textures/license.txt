@@ -1,4 +1,4 @@
-Applies to all textures made by wilkgr (gui_hotbar.png, gui_hotbar_selected.png, gui_hotbar_uforun.png)
+Applies to all textures made by wilkgr (gui_hotbar.png, gui_hotbar_selected.png, gui_hotbar_uforun.png).
 
 The MIT License (MIT)
 
