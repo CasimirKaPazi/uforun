@@ -42,3 +42,6 @@ Wuzzy (WTFPL):
   uforun_cushion_top.png
   uforun_cushion_side.png
   uforun_cushion_bottom.png
+  
+Benrob0329 (CC0)
+  ufo.obj
