@@ -199,13 +199,13 @@ if use_entity then
 else
 
 	minetest.register_on_joinplayer(function(player)
-		player:set_properties({
-			mesh = "ufo.x",
-			textures = {"ufo_skin.png",},
-			visual = "mesh",
-			visual_size = {x=1, y=1},
-		})
+
+		uforun.player_set_model(player, "ufo.obj", "uforun_ufo.png")
+		player:set_eye_offset({x=0,y=-10,z=0},{x=0,y=0,z=0})
+		player:set_inventory_formspec(uforun.inv_form)
+
 	end)
+
 
 	minetest.register_globalstep(function(dtime)
 		for _, player in pairs(minetest.get_connected_players()) do

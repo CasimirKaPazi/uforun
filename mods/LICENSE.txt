@@ -41,3 +41,6 @@ Wuzzy (WTFPL):
   levelnodes_cushion_top.png
   levelnodes_cushion_side.png
   levelnodes_cushion_bottom.png
+
+Benrob0329 (CC0)
+  ufo.obj
